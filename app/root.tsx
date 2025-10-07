@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <main className="flex pb-4 min-h-screen">
-          <div className="flex-1 flex flex-col gap-8 min-h-0 p-4"> 
+          <div className="flex-1 flex flex-col gap-2 min-h-0 p-4"> 
             <Navbar />
             <div className="flex-1 overflow-y-auto">
               {children}
