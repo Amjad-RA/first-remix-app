@@ -8,6 +8,20 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  return <HomePage />;
+export async function clientLoader({
+  params,
+}: Route.ClientLoaderArgs) {
+  const res = await fetch(`https://fakestoreapi.com/products`);
+  const products = await res.json();
+  return products;
+}
+
+export function HydrateFallback() {
+  return <div className="p-4 justify-center items-center w-fit m-auto h-2/3 flex">
+    <h1 className="text-3xl font-bold animate-ping">Loading...</h1>
+  </div>;
+}
+
+export default function Home({ loaderData } : Route.ComponentProps) {
+  return <HomePage products={loaderData ?? []}/>;
 }
