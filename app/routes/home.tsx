@@ -11,6 +11,7 @@ export function meta({}: Route.MetaArgs) {
 export async function clientLoader({
   params,
 }: Route.ClientLoaderArgs) {
+  //TODO: move to env file and use proper API service
   const res = await fetch(`https://fakestoreapi.com/products`);
   const products = await res.json();
   return products;

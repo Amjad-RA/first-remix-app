@@ -4,4 +4,6 @@ export default [
   index("routes/home.tsx"),
   route("/about", "routes/about.tsx"),
   route("/contact", "routes/contact.tsx"),
+  route("/product/:id", "routes/product.tsx"),
+  route("/dashboard", "routes/dashboard.tsx"),
 ] satisfies RouteConfig;
