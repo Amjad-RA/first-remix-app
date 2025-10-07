@@ -6,10 +6,6 @@ A modern, production-ready template for building full-stack React applications u
 
 Check out the live demo [here](https://first-remix-app-ten.vercel.app/).
 
-## Screenshots
-
-![Home Page](./screenshots/demo.mov)
-
 ## Getting Started
 
 ### Installation
